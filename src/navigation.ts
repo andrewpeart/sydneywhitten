@@ -63,11 +63,10 @@ export const headerData = {
       // ],
     }
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Sign up!', href: 'https://www.mailerlite.com/', target: '_blank' }],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') }
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' }
   ]
 };
 

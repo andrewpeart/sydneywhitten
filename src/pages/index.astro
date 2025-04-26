@@ -12,6 +12,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import localStockImage1 from '../assets/images/sydney-whitten-stock-1.jpg';
+import localStockImage2 from '../assets/images/sydney-whitten-stock-2.jpg';
+
 const metadata = {
   title: 'Sydney Whitten',
   ignoreTitleTemplate: true,
@@ -79,78 +82,159 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+  <Content
+    tagline=""
+    title=""
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Grinding away at school/work to build your dream future.',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          '',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Being the “go-to gal” who everyone can always count on.',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          '',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Juggling the roles of caregiver, nurturer, and supporter of the ones you love.',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          '',
+      },
+      {
+        title: 'AND somehow still balancing your family, friends, finances, work, and everything else life throws at you.',
+        description:
+          '',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: localStockImage2,
+      alt: '',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">I see you out there!</h3>
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
+  <Content
     isAfterContent
+    isReversed
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Hormonal mood changes',
+        description: `(I’m looking at you PMS and Menopause) leave you almost unable to recognize yourself. You’re moody, tired, and just want to hide away!`,
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Irregular periods are more than inconvenient',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'they bring anxiety, fear around future fertility, and a whole lot of “what the heck is happening with my hormones?”',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Painful periods are debilitating',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          "leaving you curled up in a ball, frustrated, and missing out on day-to-day activities.",
       },
       {
-        title: 'Integration of media',
+        title: 'Gas & bloating has brought your stretchy pants to the forefront of your closet.',
         description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          'You’ve tried all of the tik tok trends, quick fix suggestions, and yet, you’re still suffering!',
+      },
+      {
+        title: 'Constipation not only weighs on you physically, but also weighs on your self-esteem and mood.',
+        description:
+          ' You feel sluggish, frustrated, and simply... stuck.',
+      },
+      {
+        title: 'Digestive symptoms have made food less enjoyable.',
+        description:
+          'Dinners out with friends, which were once exciting, instead bring anxieties around “what’s safe to eat and where’s the nearest washroom”.',
+      },
+      {
+        title: 'Perimenopause and Menopause feels like one big, never-ending rollercoaster',
+        description:
+          'hot flashes, sleep disturbances, exhaustion, mood swings, bladder troubles... you just want to step off this ride and feel like your old self again.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: localStockImage1,
+      alt: 'Woman in a field looking at the sunrise',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">I also know that deep down, there’s likely more to your story. Specifically, your health story. I often hear the stories of busy women, and they sound like this:</h3>
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
+
+  <section class="dark:bg-slate-800 not-prose">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-lg text-center font-medium">
+      <strong>Sound relatable?</strong><br/>It’s time to put yourself, and your health, first. Because the last thing you want, is for your health to hold you back.
+    </div>
+  </section>
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-instagram',
+        callToAction: {
+          target: '_blank',
+          text: 'Instagram',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-facebook',
+        callToAction: {
+          target: '_blank',
+          text: 'Facebook',
+          href: '#',
+        },
+      },
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'LinkedIn',
+          href: '#',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Sydney Whitten Portrait',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hey, I'm Sydney!</h2>
+      <p>
+        Naturopathic Medical Student, with a special interest in Menstrual Health, Menopause, and Digestive Wellness.
+      </p>
+      <br />
+      <p>
+        You’re fed up, and I get it! Whether you're facing wonky periods, digestive issues that seem unresolvable, or riding the Menopause rollercoaster. You don’t feel like yourself, and it’s HARD to find help that you trust.
+      </p>
+      <br />
+      <p>As a Naturopathic Student I can’t provide you care quite yet. However, my eventual mission is to provide you the time and space to share your story, and to use the best evidence and tools available to help you overcome these health challenges. So that you can show up feeling comfortable, confident, and like your best-self each day. 
+        It’s time to get you, feeling like YOU again.</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- Content Widget **************** -->
 
@@ -226,67 +310,40 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
-  <!-- <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+  <Features2
+    title="Treatable Conditions"
+    subtitle="Common conditions that are central to my practice."
+    tagline=""
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Digestive Health',
+        description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>IBS</li><li>Gut Dysbiosis/SIBO</li><li>Reflux</li></ul>",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Menstrual Health',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+          "<ul><li>Irregular Periods</li><li>Heavy periods</li><li>Painful periods</li><li>Premenstrual syndrome (PMS)</li><li>Polycystic Ovarian Syndrome PCOS</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP tests</li></ul>",
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'Perimenopause & Menopause',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          '<ul><li>Hot Flashes & Night sweats</li><li>Mood swings</li><li>Low energy</li><li>Sleep disturbances</li><li>Weight Gain</li><li>Vaginal dryness</li><li>Bladder Incontinence</li></ul>',
         icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
-  </Features2> -->
+  </Features2>
+
+  <section class="dark:bg-slate-800 not-prose bg-blue-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-lg font-medium">
+      <strong>Imagine a life where:</strong><br/><p>After a long day of eating, the state of your digestion doesn’t even cross your mind.</p><p>The burden of your monthly cycle has lifted- leaving you feeling more comfortable, confident, and able to function your best all month long.</p><p>The ups and downs of the Menopause rollercoaster start to stabilize, allowing you to feel refreshed, balanced in your mood and emotions, and more like yourself again.</p>
+    </div>
+  </section>
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -300,7 +357,7 @@ const metadata = {
 
   <!-- FAQs Widget ******************* -->
 
-  <FAQs
+  <!-- <FAQs
     title="Frequently Asked Questions"
     subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
     tagline="FAQs"
@@ -337,22 +394,22 @@ const metadata = {
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
     ]}
-  />
+  /> -->
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
       { title: 'Stars', amount: '24.8K' },
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     actions={[
       {
         variant: 'primary',
@@ -371,5 +428,5 @@ const metadata = {
       Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
       waste more time! :P
     </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 </Layout>

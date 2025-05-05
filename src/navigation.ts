@@ -7,7 +7,7 @@ export const headerData = {
       href: getHomePermalink(),
     },
     {
-      text: 'Conditions',
+      text: 'Health Concerns',
       href: getPermalink('/conditions')
       // links: [
       //   {
@@ -63,7 +63,7 @@ export const headerData = {
       // ],
     }
   ],
-  actions: [{ text: 'Sign up!', href: 'https://www.mailerlite.com/', target: '_blank' }],
+  actions: [{ text: 'Join Waitlist', href: 'https://www.mailerlite.com/', target: '_blank' }],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' }

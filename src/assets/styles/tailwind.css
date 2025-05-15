@@ -50,6 +50,10 @@
     color: var(--sw-color-mint-20);
   }
 
+  .sw-color-mist {
+    color: var(--sw-color-mist);
+  }
+
   .sw-color-mist-20 {
     color: var(--sw-color-mist-20);
   }
@@ -64,6 +68,18 @@
 
   .sw-bg-color-fern {
     background-color: var(--sw-color-fern);
+  }
+
+  .sw-bg-color-ember {
+    background-color: var(--sw-color-ember);
+  }
+
+  .sw-bg-color-ember-60 {
+    background-color: var(--sw-color-ember-60);
+  }
+
+  .sw-bg-color-ember-80 {
+    background-color: var(--sw-color-ember-80);
   }
 }
 

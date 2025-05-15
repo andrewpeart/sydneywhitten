@@ -65,8 +65,8 @@ export const headerData = {
   ],
   actions: [{ text: 'Join Waitlist', href: 'https://www.mailerlite.com/', target: '_blank' }],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' }
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/keepwellnaturally/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61573928047509' }
   ]
 };
 

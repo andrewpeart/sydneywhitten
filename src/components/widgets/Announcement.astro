@@ -1,6 +1,29 @@
 ---
-
 ---
+
+<script is:inline>
+function countdown(targetDate) {
+  const targetTime = new Date(targetDate).getTime();
+
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const timeLeft = targetTime - now;
+
+    if (timeLeft <= 0) {
+      clearInterval(interval);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+    document.getElementById("countdown").innerHTML = "Coming soon to a clinic near you in " +
+      days + " days!";
+  }, 1000);
+}
+
+countdown("January 5, 2026 12:00:00 UTC"); // Example usage
+</script>
 
 <div
   class="dark text-muted text-lg sw-bg-color-nettle dark:bg-transparent dark:border-b hidden md:flex justify-center gap-1 overflow-hidden px-3 py-4 mb-5 relative text-ellipsis whitespace-nowrap"
@@ -9,7 +32,6 @@
     class="dark:bg-slate-700 bg-white/40 dark:text-slate-300 font-semibold px-1 py-0.5 text-sm mr-0.5 rtl:mr-0 rtl:ml-0.5 inline-block"
     >Coming soon!</span
   > -->
-  <p class="text-white font-medium"
-    ><u>Coming soon</u> to a clinic near you!</a
-  >
+  <p class="text-white font-medium" id="countdown"
+    ></p>
 </div>

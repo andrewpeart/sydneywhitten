@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'HV Simplicite';
+  src: url('/fonts/HV-Simplicite-Bold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
@@ -128,4 +136,8 @@
 
 .dd *:first-child {
   margin-top: 0;
+}
+
+.text-6xl {
+  line-height: 1.3;
 }

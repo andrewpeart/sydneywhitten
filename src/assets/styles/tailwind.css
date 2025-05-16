@@ -42,6 +42,10 @@
     background-color: var(--sw-color-nettle);
   }
 
+  .sw-bg-color-willow-60 {
+    background-color: var(--sw-color-willow-60);
+  }
+
   .sw-fg-color-willow-20 {
     color: var(--sw-color-willow-20);
   }

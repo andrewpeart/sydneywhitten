@@ -114,31 +114,30 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">I see you out there,</h3>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl">I see you out there,</h3>
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-transparent"></div>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
 
   <Content
-    isAfterContent
-    isReversed
+    isFullWidth={true}
     items={[
       {
-        title: 'Hormonal mood changes',
+        title: 'Your hormonal mood changes',
         description: `(I’m looking at you PMS and Menopause) leave you almost unable to recognize yourself. You’re moody, tired, and just want to hide away!`,
       },
       {
-        title: 'Irregular periods are more than inconvenient',
+        title: 'Your irregular periods are more than inconvenient',
         description:
           'they bring anxiety, fear around future fertility, and a whole lot of “what the heck is happening with my hormones?”',
       },
       {
-        title: 'Painful periods are debilitating',
+        title: 'Your painful periods are debilitating',
         description:
           "leaving you curled up in a ball, frustrated, and missing out on day-to-day activities.",
       },
@@ -163,17 +162,13 @@ const metadata = {
           'hot flashes, sleep disturbances, exhaustion, mood swings, bladder troubles... you just want to step off this ride and feel like your old self again.',
       },
     ]}
-    image={{
-      src: localStockImage1,
-      alt: 'Woman in a field looking at the sunrise',
-    }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">I also know that deep down, there’s likely more to your story. Specifically, your health story. I often hear the stories of busy women, and they sound like this:</h3>
+      <h3 class="text-2xl font-bold tracking-normal sm:text-3xl mb-2">But, I also know that deep down there is more to your story. Specifically your health story.</h3>
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 sw-bg-color-willow bg-[url(sydney-whitten-brand-mark-ember.svg)] bg-no-repeat bg-size-[auto_75] bg-right opacity-5"></div>
     </Fragment>
   </Content>
 

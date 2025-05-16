@@ -1,6 +1,6 @@
 site:
   name: Sydney Whitten
-  site: 'https://astrowind.vercel.app'
+  site: 'https://swhitten.netlify.app/'
   base: '/'
   trailingSlash: false
 

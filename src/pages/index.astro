@@ -15,6 +15,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import localStockImage1 from '../assets/images/sydney-whitten-stock-1.jpg';
 import localStockImage2 from '../assets/images/sydney-whitten-stock-2.jpg';
 import localStockImage3 from '../assets/images/sydney-whitten-stock-3.jpg';
+import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
 
 const metadata = {
   title: 'Sydney Whitten - Naturopathic Medicine for Digestion, Menstrual and Menopause Health',
@@ -172,22 +173,23 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <section class="dark:bg-slate-800 not-prose">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-lg text-center font-medium">
+  <section class="mt-20 mb-20 not-prose">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-2xl text-center font-medium leading-normal tracking-normal">
       <strong>Sound relatable?</strong><br/>It’s time to put yourself, and your health, first. Because the last thing you want, is for your health to hold you back.
     </div>
   </section>
 
   <Content
     id="about"
-    columns={3}
+    columns={4}
+    isReversed
     items={[
       {
         icon: 'tabler:brand-instagram',
         callToAction: {
           target: '_blank',
           text: 'Instagram',
-          href: '#',
+          href: 'https://www.instagram.com/keepwellnaturally/',
         },
       },
       {
@@ -195,7 +197,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Facebook',
-          href: '#',
+          href: 'https://www.facebook.com/profile.php?id=61573928047509',
         },
       },
       {
@@ -203,18 +205,18 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'LinkedIn',
-          href: '#',
+          href: 'https://www.linkedin.com/in/sydney-whitten',
         },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Sydney Whitten Portrait',
+      src: swProfilePhoto,
+      alt: 'Sydney Whitten Profile Photo',
       loading: 'eager',
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Hey, I'm Sydney!</h2>
+      <h2 class="text-2xl font-bold tracking-normal sm:text-3xl mb-2">Hey, I'm Sydney!</h2>
       <p>
         Naturopathic Medical Student, with a special interest in Menstrual Health, Menopause, and Digestive Wellness.
       </p>
@@ -228,7 +230,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 sw-bg-color-mist"></div>
     </Fragment>
   </Content>
 
@@ -314,7 +316,7 @@ const metadata = {
       {
         title: 'Digestive Health',
         description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>IBS</li><li>Gut Dysbiosis/SIBO</li><li>Reflux</li></ul>",
-        icon: 'flat-color-icons:template',
+        icon: '/icons/digestion.png',
       },
       {
         title: 'Menstrual Health',

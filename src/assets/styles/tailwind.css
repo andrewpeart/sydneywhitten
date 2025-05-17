@@ -62,6 +62,10 @@
     color: var(--sw-color-mist);
   }
 
+  .sw-bg-color-mist {
+    background-color: var(--sw-color-mist);
+  }
+
   .sw-color-mist-20 {
     color: var(--sw-color-mist-20);
   }

@@ -74,12 +74,28 @@
     background-color: var(--sw-color-mist-20);
   }
 
+  .sw-color-forest {
+      color: var(--sw-color-forest);
+  }
+
+  .sw-bg-color-forest {
+      background-color: var(--sw-color-nettle);
+  }
+
+  .sw-color-nettle {
+      color: var(--sw-color-nettle);
+  }
+
   .sw-bg-color-nettle-80 {
     background-color: var(--sw-color-nettle-80);
   }
 
   .sw-bg-color-fern {
     background-color: var(--sw-color-fern);
+  }
+
+  .sw-color-fern {
+      color: var(--sw-color-fern);
   }
 
   .sw-bg-color-ember {

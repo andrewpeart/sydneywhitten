@@ -310,26 +310,29 @@ const metadata = {
 
   <Features2
     title="Your Health Concerns"
-    subtitle="Common health concerns that are central to my practice and your well being."
+    subtitle="Get the relief you deserve"
     tagline=""
     items={[
-      {
-        title: 'Digestive Health',
-        description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>IBS</li><li>Gut Dysbiosis/SIBO</li><li>Reflux</li></ul>",
-        icon: 'healthicons:colon-outline',
-      },
       {
         title: 'Menstrual Health',
         description:
           "<ul><li>Irregular Periods</li><li>Heavy periods</li><li>Painful periods</li><li>Premenstrual syndrome (PMS)</li><li>Polycystic Ovarian Syndrome PCOS</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP tests</li></ul>",
         icon: 'healthicons:female-reproductive-system-outline',
+        classes: {'panel': 'sw-bg-color-ember sw-color-mist'}
       },
       {
         title: 'Perimenopause & Menopause',
         description:
           '<ul><li>Hot Flashes & Night sweats</li><li>Mood swings</li><li>Low energy</li><li>Sleep disturbances</li><li>Weight Gain</li><li>Vaginal dryness</li><li>Bladder Incontinence</li></ul>',
         icon: 'healthicons:female',
+        classes: {'panel': 'sw-bg-color-dusk sw-color-mist'}
       },
+      {
+        title: 'Digestive Health',
+        description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>IBS</li><li>Gut Dysbiosis/SIBO</li><li>Reflux</li></ul>",
+        icon: 'healthicons:colon-outline',
+        classes: {'panel': 'sw-bg-color-forest sw-color-mist'}
+      }
     ]}
   >
     <Fragment slot="bg">

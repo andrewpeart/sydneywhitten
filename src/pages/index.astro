@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
+import { Icon } from 'astro-icon/components';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -130,7 +131,7 @@ const metadata = {
     items={[
       {
         title: 'Your hormonal mood changes',
-        description: `(I’m looking at you PMS and Menopause) leave you almost unable to recognize yourself. You’re moody, tired, and just want to hide away!`,
+        description: `(I’m looking at you <strong>PMS</strong> and <strong>Menopause</strong>) leave you almost unable to recognize yourself. You’re moody, tired, and just want to hide away!`,
       },
       {
         title: 'Your irregular periods are more than inconvenient',
@@ -160,7 +161,7 @@ const metadata = {
       {
         title: 'Perimenopause and Menopause feels like one big, never-ending rollercoaster',
         description:
-          'hot flashes, sleep disturbances, exhaustion, mood swings, bladder troubles... you just want to step off this ride and feel like your old self again.',
+          '<strong>hot flashes, sleep disturbances, exhaustion, mood swings, bladder troubles</strong>... you just want to step off this ride and feel like your old self again.',
       },
     ]}
   >
@@ -181,34 +182,8 @@ const metadata = {
 
   <Content
     id="about"
-    columns={4}
+    columns={3}
     isReversed
-    items={[
-      {
-        icon: 'tabler:brand-instagram',
-        callToAction: {
-          target: '_blank',
-          text: 'Instagram',
-          href: 'https://www.instagram.com/keepwellnaturally/',
-        },
-      },
-      {
-        icon: 'tabler:brand-facebook',
-        callToAction: {
-          target: '_blank',
-          text: 'Facebook',
-          href: 'https://www.facebook.com/profile.php?id=61573928047509',
-        },
-      },
-      {
-        icon: 'tabler:brand-linkedin',
-        callToAction: {
-          target: '_blank',
-          text: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/sydney-whitten',
-        },
-      },
-    ]}
     image={{
       src: swProfilePhoto,
       alt: 'Sydney Whitten Profile Photo',
@@ -227,6 +202,7 @@ const metadata = {
       <br />
       <p>As a Naturopathic Student I can’t provide you care quite yet. However, my eventual mission is to provide you the time and space to share your story, and to use the best evidence and tools available to help you overcome these health challenges. So that you can show up feeling comfortable, confident, and like your best-self each day. 
         It’s time to get you, feeling like YOU again.</p>
+      <p class="mt-5"><Icon name="tabler:circle-arrow-right" class="w-5 h-5 inline-block -mt-0.5 sw-color-ember" /> <a href="#">read my bio</a></p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -316,7 +292,7 @@ const metadata = {
       {
         title: 'Menstrual Health',
         description:
-          "<ul><li>Irregular Periods</li><li>Heavy periods</li><li>Painful periods</li><li>Premenstrual syndrome (PMS)</li><li>Polycystic Ovarian Syndrome PCOS</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP tests</li></ul>",
+          "<ul><li>Irregular Periods</li><li>Heavy periods</li><li>Painful periods</li><li>Premenstrual syndrome (PMS)</li><li>Polycystic Ovarian Syndrome (PCOS)</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP tests</li></ul>",
         icon: 'healthicons:female-reproductive-system-outline',
         classes: {'panel': 'sw-bg-color-ember sw-color-mist'}
       },
@@ -324,7 +300,8 @@ const metadata = {
         title: 'Perimenopause & Menopause',
         description:
           '<ul><li>Hot Flashes & Night sweats</li><li>Mood swings</li><li>Low energy</li><li>Sleep disturbances</li><li>Weight Gain</li><li>Vaginal dryness</li><li>Bladder Incontinence</li></ul>',
-        icon: 'healthicons:female',
+        icon: 'tabler:circle-dotted-letter-m',
+        // icon: 'healthicons:female',
         classes: {'panel': 'sw-bg-color-dusk sw-color-mist'}
       },
       {
@@ -343,9 +320,9 @@ const metadata = {
   <section class="not-prose sw-bg-color-mist">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-lg font-medium">
       <h2 class="text-2xl font-semibold pb-3">Imagine a life where:</h2>
-      <p class="text-xl py-3 sw-color-ember">The burden of your monthly cycle has lifted- leaving you feeling more comfortable, confident, and able to function your best all month long.</p>
-      <p class="text-xl py-3 sw-color-dusk">The ups and downs of the Menopause rollercoaster start to stabilize, allowing you to feel refreshed, balanced in your mood and emotions, and more like yourself again.</p>
-      <p class="text-xl py-3 sw-color-forest">After a long day of eating, the state of your digestion doesn’t even cross your mind.</p>
+      <p class="text-xl py-3 sw-color-ember"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-ember" /> The burden of your monthly cycle has lifted- leaving you feeling more comfortable, confident, and able to function your best all month long.</p>
+      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-dusk" /> The ups and downs of the Menopause rollercoaster start to stabilize, allowing you to feel refreshed, balanced in your mood and emotions, and more like yourself again.</p>
+      <p class="text-xl py-3 sw-color-forest"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-forest" /> After a long day of eating, the state of your digestion doesn’t even cross your mind.</p>
     </div>
   </section>
 

@@ -30,7 +30,7 @@ export const headerData = {
     },
     {
       text: 'Meet Sydney',
-      href: getPermalink('/about')
+      href: getPermalink('/meet-sydney')
       // links: [
       //   {
       //     text: 'Features (Anchor Link)',

@@ -8,6 +8,9 @@ import Content from '~/components/widgets/Content.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { YouTube } from 'astro-embed';
 import Contact from './contact.astro';
+import Image from 'astro/components/Image.astro';
+import swSignatureImg from '../assets/images/sydney-whitten-keep-well-sig-fern.svg';
+import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
 
 const metadata = {
   title: 'Meet Sydney',
@@ -25,7 +28,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      <YouTube id="3URtTIdnXIk" />
+      <YouTube class="mx-auto" id="3URtTIdnXIk" />
     </Fragment>
     <!-- <Fragment slot="subtitle">
       Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
@@ -36,10 +39,28 @@ const metadata = {
 
   <Content>
     <Fragment slot="content">
-      <p class="mb-3">Hi there, my name is Sydney Whitten, and I’m so happy you’ve made your way to my page. You may have noticed the countdown clock on my homepage—I'm finishing up my Naturopathic Medicine education, which includes my final graduation (yay) and licensing exams. There’s a lot more to come, and I’m excited to start providing care soon, so stay tuned!</p>
+      <Image src={swProfilePhoto}
+            class="max-w-full lg:max-w-[900px] mx-auto float-right pl-10 pb-10 rounded-md"
+            widths={[400, 900]}
+            sizes="(max-width: 450px) 400px, 450px"
+            alt="Sydney Whitten Profile"
+            width={450}
+            loading="eager"
+            decoding="async"
+          />
+      <p class="text-lg mb-3">Hi there, my name is Sydney Whitten, and I’m so happy you’ve made your way to my page. You may have noticed the countdown clock on my homepage—I'm finishing up my Naturopathic Medicine education, which includes my final graduation (yay) and licensing exams. There’s a lot more to come, and I’m excited to start providing care soon, so stay tuned!</p>
       <p class="mb-3">In the meantime, I want to share a bit about myself and my approach to your healthcare. To backtrack a little bit I have a Bachelor of Science in Biomedical Toxicology, where I studied first how the human body functions, as well as learned about all the exposures and habits that have the potential to cause the body harm. I balanced that education out with a minor in Nutritional and Nutraceutical Sciences, which deepened my understanding of the positive effects that nutrition, exercise, and healthy habits can have on our bodies.</p>
       <p class="mb-3">All of this to say- After graduation, I was excited about using my knowledge in supporting people’s long-term health—but I quickly realized after entering the real world- how easy it is to neglect our health symptoms and well-being in the chaos of everyday life. Between family, work, bills, a social life? and all the other demands on your time, health and those bothersome symptoms you’ve been struggling with often get pushed aside. Add in a healthcare system that's overwhelmed, and it’s really no surprise that  many feel unsupported in their health and unsure where to turn.</p>
-      <p class="mb-3">Now this is where I aim to make a difference. My mission is to give you the time and a safe space to offload your health concerns, paste experiences and goals. Let me take on all of that weight I’ll then use my knowledge, clinical experience, the latest research, and your preferences to create a personalized plan to get you feeling better. No more days of frustration with nobody to talk about your concerns. No more days of frantically googling or tik toking only to overwhelm yourself trying to figure out what is real and what is false. That’s what I’m here for. To be the person on your team that helps you navigate your health concerns, and supports you in your health and well-being for the long-game- so that you can take that energy and show up as your best self in all the other avenues of your life.</p>
+      <p>Now this is where I aim to make a difference. My mission is to give you the time and a safe space to offload your health concerns, paste experiences and goals. Let me take on all of that weight I’ll then use my knowledge, clinical experience, the latest research, and your preferences to create a personalized plan to get you feeling better. No more days of frustration with nobody to talk about your concerns. No more days of frantically googling or tik toking only to overwhelm yourself trying to figure out what is real and what is false. That’s what I’m here for. To be the person on your team that helps you navigate your health concerns, and supports you in your health and well-being for the long-game- so that you can take that energy and show up as your best self in all the other avenues of your life.</p>
+        <Image src={swSignatureImg}
+            class="max-w-full lg:max-w-[900px] mx-auto float-left mt-10 ml-48 -rotate-6"
+            widths={[400, 900]}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt="Sydney Whitten Signature"
+            width={125}
+            loading="eager"
+            decoding="async"
+          />
     </Fragment>
 
     <Fragment slot="bg">

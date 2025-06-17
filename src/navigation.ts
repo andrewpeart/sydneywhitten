@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'Health Concerns',
-      href: getPermalink('/conditions')
+      href: '#health-concerns'
       // links: [
       //   {
       //     text: 'SaaS',

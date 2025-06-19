@@ -4,20 +4,13 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import { Icon } from 'astro-icon/components';
-import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getPermalink } from '../utils/permalinks';
 
-import localStockImage1 from '../assets/images/sydney-whitten-stock-1.jpg';
-import localStockImage2 from '../assets/images/sydney-whitten-stock-2.jpg';
 import localStockImage3 from '../assets/images/sydney-whitten-stock-3.jpg';
 import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
+import swBrownTexturedBg from '../assets/images/brown-textured-bg.jpg';
 
 const metadata = {
   title: 'Sydney Whitten - Naturopathic Medicine for Digestion, Menstrual and Menopause Health',
@@ -91,17 +84,12 @@ const metadata = {
     title=""
     items={[
       {
-        title: 'Grinding away at school/work to build your dream future.',
+        title: 'Hustling at school/work to build your dream future.',
         description:
           '',
       },
       {
         title: 'Being the “go-to gal” who everyone can always count on.',
-        description:
-          '',
-      },
-      {
-        title: 'Juggling the roles of caregiver, nurturer, and supporter of the ones you love.',
         description:
           '',
       },
@@ -128,11 +116,12 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    id="health-story"
     isFullWidth={true}
     items={[
       {
         title: 'Your <strong>hormonal mood changes</strong>',
-        description: `(I’m looking at you <strong>PMS</strong> and <strong>Menopause</strong>) leave you almost unable to recognize yourself. You’re moody, tired, and just want to hide away!`,
+        description: `(I’m looking at you <strong>PMS</strong> and <strong>Menopause</strong>) leave you almost unable to recognize yourself.`,
       },
       {
         title: 'Your <strong>irregular periods</strong> are more than inconvenient',
@@ -167,7 +156,7 @@ const metadata = {
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-normal sm:text-3xl mb-2">But, I also know that deep down there is more to your story. Specifically your health story.</h3>
+      <h3 class="text-2xl font-bold tracking-normal sm:text-3xl mb-2">But, I also know there's likely more to your story. Specifically your health story.</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -175,9 +164,9 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <section class="mt-20 mb-20 not-prose">
-    <div class="sw-color-nettle max-w-6xl mx-auto px-4 sm:px-6 py-4 text-2xl text-center font-medium leading-normal tracking-normal">
-      <strong>Sound relatable?</strong><br/>It’s time to put yourself, and your health, first. Because the last thing you want, is for your health to hold you back.
+  <section style={`background-image: url(${swBrownTexturedBg.src})`} class="pt-20 pb-20 not-prose bg-[url(${swBrownTexturedBg.src})]" id="sound-relatable">
+    <div class="sw-color-mist max-w-6xl mx-auto px-4 sm:px-6 py-4 text-4xl text-center font-medium leading-normal tracking-normal">
+      <strong>Sound relatable?</strong><br/>It’s time to put yourself, and your health, first.
     </div>
   </section>
 

@@ -280,6 +280,7 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   columns?: number;
   isReversed?: boolean;
   isAfterContent?: boolean;
+  imageFullWidth?: boolean;
   callToAction?: CallToAction;
   isFullWidth?: boolean
 }

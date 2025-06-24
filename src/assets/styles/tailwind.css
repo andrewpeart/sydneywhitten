@@ -98,6 +98,10 @@
       color: var(--sw-color-fern);
   }
 
+  .sw-color-ember {
+    color: var(--sw-color-ember);
+  }
+
   .sw-bg-color-ember {
     background-color: var(--sw-color-ember);
   }
@@ -108,6 +112,10 @@
 
   .sw-bg-color-ember-80 {
     background-color: var(--sw-color-ember-80);
+  }
+
+  .sw-bg-color-blue-complimentary {
+    background-color: #09426D;
   }
 }
 

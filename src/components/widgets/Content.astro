@@ -18,6 +18,7 @@ const {
   isReversed = false,
   isAfterContent = false,
   isFullWidth = false,
+  imageFullWidth = true,
   id,
   isDark = false,
   classes = {},
@@ -68,10 +69,10 @@ const {
           }}
         />
       </div>
-      <div aria-hidden="true" class={`${isFullWidth ? 'basis-1' : 'basis-1/2'} mt-10 md:mt-0`}>
+      <div aria-hidden="true" class={`${isFullWidth ? 'basis-1' : imageFullWidth ? '' : 'basis-1/2'} mt-10 md:mt-0`}>
           {
           image && (
-            <div class="relative m-auto max-w-4xl">
+            <div class={`${imageFullWidth ? '' : 'max-w-4xl'} relative m-auto`}>
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (

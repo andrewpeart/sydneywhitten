@@ -6,6 +6,7 @@ import Note from '~/components/widgets/Note.astro';
 import { Icon } from 'astro-icon/components';
 import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
+import Button from '~/components/ui/Button.astro';
 import { getPermalink } from '../utils/permalinks';
 
 import localStockImage3 from '../assets/images/sydney-whitten-stock-3.jpg';
@@ -199,7 +200,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 sw-bg-color-mist"></div>
+      <div class="absolute inset-0 sw-bg-color-mist-50"></div>
     </Fragment>
   </Content>
 
@@ -318,12 +319,19 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <section class="not-prose sw-bg-color-mist">
+  <section class="not-prose sw-bg-color-mist-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-lg font-medium">
-      <h2 class="text-2xl font-semibold pb-3">Imagine a life where:</h2>
-      <p class="text-xl py-3 sw-color-ember"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-ember" /> The burden of your monthly cycle has lifted- leaving you feeling more comfortable, confident, and able to function your best all month long.</p>
-      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-dusk" /> The ups and downs of the Menopause rollercoaster start to stabilize, allowing you to feel refreshed, balanced in your mood and emotions, and more like yourself again.</p>
-      <p class="text-xl py-3 sw-color-forest"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-forest" /> After a long day of eating, the state of your digestion doesn’t even cross your mind.</p>
+      <h2 class="text-2xl font-semibold pb-3 sw-color-dusk">Imagine a life where:</h2>
+      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-ember" /> The burden of your monthly cycle has lifted- leaving you feeling more comfortable, confident, and able to function your best all month long.</p>
+      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-dusk" /> The ups and downs of Menopause start to stabilize, allowing you to feel refreshed, balanced, and more like yourself again.</p>
+      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-forest" /> After a long day of eating, the state of your digestion doesn’t even cross your mind.</p>
+    </div>
+  </section>
+
+  <section class="pt-20 pb-20 not-prose sw-color-mint-20 bg-size-200" id="make-it-happen">
+    <div class="sw-color-forest max-w-6xl mx-auto px-4 sm:px-6 py-4 text-4xl text-center font-medium leading-normal tracking-normal">
+      <strong>Let's make it happen!</strong><br/>
+      <Button text='Join Waitlist' href='https://www.mailerlite.com/' target='_blank' class="mt-10 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-lg w-auto sw-bg-color-ember sw-color-mist hover:sw-bg-color-ember-80" />
     </div>
   </section>
 

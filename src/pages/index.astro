@@ -12,6 +12,7 @@ import { getPermalink } from '../utils/permalinks';
 import localStockImage3 from '../assets/images/sydney-whitten-stock-3.jpg';
 import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
 import swBrownTexturedBg from '../assets/images/brown-textured-bg.jpg';
+import swRingsBg from '../assets/images/bg-texture.jpg';
 
 const metadata = {
   title: 'Sydney Whitten - Naturopathic Medicine for Digestion, Menstrual and Menopause Health',
@@ -161,11 +162,11 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 sw-bg-color-willow bg-[url(bg-texture.jpg)] bg-no-repeat bg-cover bg-right"></div>
+      <div style={`background-image: linear-gradient(rgba(128, 126, 99, 0.3), rgba(255, 255, 255, 0.9)), url(${swRingsBg.src})`} class="absolute inset-0 sw-bg-color-willow bg-opacity-25 bg-no-repeat bg-cover bg-right"></div>
     </Fragment>
   </Content>
 
-  <section style={`background-image: url(${swBrownTexturedBg.src})`} class="pt-20 pb-20 not-prose bg-[url(${swBrownTexturedBg.src})]" id="sound-relatable">
+  <section style={`background-image: url(${swBrownTexturedBg.src})`} class="pt-20 pb-20 not-prose" id="sound-relatable">
     <div class="sw-color-mist max-w-6xl mx-auto px-4 sm:px-6 py-4 text-4xl text-center font-medium leading-normal tracking-normal">
       <strong>Sound relatable?</strong><br/>It’s time to put yourself, and your health, first.
     </div>
@@ -303,12 +304,12 @@ const metadata = {
         title: 'Digestive Health',
         description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>IBS</li><li>Gut Dysbiosis/SIBO</li><li>Reflux</li></ul>",
         icon: 'healthicons:colon-outline',
-        classes: {'panel': 'sw-bg-color-forest sw-color-mist'}
+        classes: {'panel': 'sw-bg-color-fern sw-color-mist'}
       }
     ]}
   >
       <Fragment slot="feature-more">
-        <div class="relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade grid rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] sw-bg-color-blue-complimentary p-6 mt-6 sw-color-mist">
+        <div class="relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade grid rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] sw-bg-color-forest p-6 mt-6 sw-color-mist">
           <Icon name="healthicons:resilient-and-migration-sensitive-health-system-outline" class="mb-2 w-10 h-10" />
           <div class='text-xl font-bold'>General Health</div>
           <p class='text-muted mt-2'>The human body is complex, and symptoms are often wide-ranging. I support patients with ALL health concerns and goals.</p>

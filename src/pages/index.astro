@@ -10,6 +10,7 @@ import Button from '~/components/ui/Button.astro';
 import { getPermalink } from '../utils/permalinks';
 
 import localStockImage3 from '../assets/images/sydney-whitten-stock-3.jpg';
+import heroBg from '../assets/images/switten-hero-bg.png';
 import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
 import swBrownTexturedBg from '../assets/images/brown-textured-bg.jpg';
 import swRingsBg from '../assets/images/bg-texture.jpg';
@@ -23,8 +24,8 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <Hero>
-    <Fragment slot="title">
-      You’re always taking care of others,<br/>but who’s taking care of you?
+    <Fragment bg=heroBg slot="title">
+      Naturopathic Medical Graduate- Menstrual Health, Menopause, &amp; Digestive Wellness.
     </Fragment>
   </Hero>
 
@@ -85,21 +86,21 @@ const metadata = {
     tagline=""
     title=""
     items={[
-      {
-        title: 'Hustling at school/work to build your dream future.',
-        description:
-          '',
-      },
-      {
-        title: 'Being the “go-to gal” who everyone can always count on.',
-        description:
-          '',
-      },
-      {
-        title: 'AND somehow still balancing your family, friends, finances, work, and everything else life throws at you.',
-        description:
-          '',
-      },
+      // {
+      //   title: 'Hustling at school/work to build your dream future.',
+      //   description:
+      //     '',
+      // },
+      // {
+      //   title: 'Being the “go-to gal” who everyone can always count on.',
+      //   description:
+      //     '',
+      // },
+      // {
+      //   title: 'AND somehow still balancing your family, friends, finances, work, and everything else life throws at you.',
+      //   description:
+      //     '',
+      // },
     ]}
     image={{
       src: localStockImage3,
@@ -107,7 +108,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl">I see you out there,</h3>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-5">I see you out there,</h3>
+      <p>Doing your best each day to balance your family, friends, work, social life, and everything else life throws your way! And yet, when it comes to your health concerns, the BEST does not feel to be reciprocated. You’re tired of feeling dismissed in your health concerns, and told “everything is fine” when you feel anything but fine. This is where Naturopathic Medicine comes in.</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -136,6 +138,16 @@ const metadata = {
           "leaving you curled up in a ball, frustrated, and missing out on day-to-day activities.",
       },
       {
+        title: '<strong>Perimenopause and Menopause</strong> feels like one big, never-ending rollercoaster',
+        description:
+          '<strong>hot flashes, sleep disturbances, exhaustion, mood swings, bladder troubles</strong>... you just want to step off this ride and feel like your old self again.',
+      },
+      {
+        title: '<strong>Digestive symptoms</strong> have made food less enjoyable.',
+        description:
+          'Dinners out with friends, which were once exciting, instead bring anxieties around “what’s safe to eat and where’s the nearest washroom”.',
+      },
+      {
         title: '<strong>Gas & bloating</strong> has brought your stretchy pants to the forefront of your closet.',
         description:
           'You’ve tried all of the tik tok trends, quick fix suggestions, and yet, you’re still suffering!',
@@ -145,20 +157,10 @@ const metadata = {
         description:
           ' You feel sluggish, frustrated, and simply... stuck.',
       },
-      {
-        title: '<strong>Digestive symptoms</strong> have made food less enjoyable.',
-        description:
-          'Dinners out with friends, which were once exciting, instead bring anxieties around “what’s safe to eat and where’s the nearest washroom”.',
-      },
-      {
-        title: '<strong>Perimenopause and Menopause</strong> feels like one big, never-ending rollercoaster',
-        description:
-          '<strong>hot flashes, sleep disturbances, exhaustion, mood swings, bladder troubles</strong>... you just want to step off this ride and feel like your old self again.',
-      },
     ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-normal sm:text-3xl mb-2">But, I also know there's likely more to your story. Specifically your health story.</h3>
+      <h3 class="text-2xl font-bold tracking-normal sm:text-3xl mb-2">I know there's more to your story - specifically your health story!</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -168,7 +170,7 @@ const metadata = {
 
   <section style={`background-image: url(${swBrownTexturedBg.src})`} class="pt-20 pb-20 not-prose" id="sound-relatable">
     <div class="sw-color-mist max-w-6xl mx-auto px-4 sm:px-6 py-4 text-4xl text-center font-medium leading-normal tracking-normal">
-      <strong>Sound relatable?</strong><br/>It’s time to put yourself, and your health, first.
+      <strong>Sound familiar?</strong><br/>It’s time to put yourself, and your health, first.
     </div>
   </section>
 
@@ -282,27 +284,27 @@ const metadata = {
   <Features2
     id="health-concerns"
     title="Your Health Concerns"
-    subtitle="Get the relief you deserve."
+    subtitle="Get the support you deserve."
     tagline=""
     items={[
       {
         title: 'Menstrual Health',
         description:
-          "<ul><li>Irregular Periods</li><li>Heavy periods</li><li>Painful periods</li><li>Premenstrual syndrome (PMS)</li><li>Polycystic Ovarian Syndrome (PCOS)</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP tests</li></ul>",
+          "<ul><li>Irregular Periods</li><li>Heavy Periods</li><li>Painful Periods</li><li>Premenstrual Syndrome (PMS)</li><li>Polycystic Ovarian Syndrome (PCOS)</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP Tests</li></ul>",
         icon: 'healthicons:female-reproductive-system-outline',
         classes: {'panel': 'sw-bg-color-ember sw-color-mist'}
       },
       {
         title: 'Perimenopause & Menopause',
         description:
-          '<ul><li>Hot Flashes & Night sweats</li><li>Mood swings</li><li>Low energy</li><li>Sleep disturbances</li><li>Weight Gain</li><li>Vaginal dryness</li><li>Bladder Incontinence</li></ul>',
+          '<ul><li>Hot Flashes & Night Sweats</li><li>Mood Swings</li><li>Low Energy</li><li>Sleep Disturbances</li><li>Weight Gain</li><li>Vaginal Dryness</li><li>Bladder Incontinence</li></ul>',
         icon: 'tabler:circle-dotted-letter-m',
         // icon: 'healthicons:female',
         classes: {'panel': 'sw-bg-color-dusk sw-color-mist'}
       },
       {
         title: 'Digestive Health',
-        description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>IBS</li><li>Gut Dysbiosis/SIBO</li><li>Reflux</li></ul>",
+        description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>Irritable Bowel Syndrome (IBS)</li><li>Small Intestinal Bacterial Overgrowth (SIBO)</li><li>Reflux</li></ul>",
         icon: 'healthicons:colon-outline',
         classes: {'panel': 'sw-bg-color-fern sw-color-mist'}
       }
@@ -312,7 +314,7 @@ const metadata = {
         <div class="relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade grid rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] sw-bg-color-forest p-6 mt-6 sw-color-mist">
           <Icon name="healthicons:resilient-and-migration-sensitive-health-system-outline" class="mb-2 w-10 h-10" />
           <div class='text-xl font-bold'>General Health</div>
-          <p class='text-muted mt-2'>The human body is complex, and symptoms are often wide-ranging. I support patients with ALL health concerns and goals.</p>
+          <p class='text-muted mt-2'>The human body is complex, and I recognize that symptoms are often wide-ranging. My aim is to address all health concerns, and to provide appropriate referrals when determined necessary.</p>
         </div>
       </Fragment>
     <Fragment slot="bg">
@@ -323,16 +325,16 @@ const metadata = {
   <section class="not-prose sw-bg-color-mist-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 text-lg font-medium">
       <h2 class="text-2xl font-semibold pb-3 sw-color-dusk">Imagine a life where:</h2>
-      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-ember" /> The burden of your monthly cycle has lifted- leaving you feeling more comfortable, confident, and able to function your best all month long.</p>
+      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-ember" /> The burden of your Menstrual cycle has lifted - leaving you feeling hormonally balanced, and able to function your best all month long.</p>
       <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-dusk" /> The ups and downs of Menopause start to stabilize, allowing you to feel refreshed, balanced, and more like yourself again.</p>
-      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-forest" /> After a long day of eating, the state of your digestion doesn’t even cross your mind.</p>
+      <p class="text-xl py-3 sw-color-dusk"><Icon name="tabler:corner-down-right" class="w-5 h-5 inline-block -mt-1.5 sw-color-forest" /> After a long day of eating, the state of your digestion doesn’t even cross your mind. You’re comfortable, confident, and able to enjoy food again.</p>
     </div>
   </section>
 
   <section class="pt-20 pb-20 not-prose sw-color-mint-20 bg-size-200" id="make-it-happen">
     <div class="sw-color-forest max-w-6xl mx-auto px-4 sm:px-6 py-4 text-4xl text-center font-medium leading-normal tracking-normal">
       <strong>Let's make it happen!</strong><br/>
-      <Button text='Join Waitlist' href='https://www.mailerlite.com/' target='_blank' class="mt-10 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-lg w-auto sw-bg-color-ember sw-color-mist hover:sw-bg-color-ember-80" />
+      <Button text='Join Waitlist' href='https://docs.google.com/forms/d/e/1FAIpQLSch5menaqVU46sPFTNjRZFDmos9i6TqOB9uDsXcYsMFvQQGmg/viewform' target='_blank' class="mt-10 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-lg w-auto sw-bg-color-ember sw-color-mist hover:sw-bg-color-ember-80" />
     </div>
   </section>
 

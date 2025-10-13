@@ -208,3 +208,12 @@
 #health-story p {
   font-size: 1.15em;
 }
+
+#meet-sydney-hero h1 {
+  color: #fff;
+}
+
+section #meet-sydney .headline-container {
+  min-width: 100% !important;
+}
+

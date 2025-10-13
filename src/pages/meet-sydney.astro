@@ -9,8 +9,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import { YouTube } from 'astro-embed';
 import Contact from './contact.astro';
 import Image from 'astro/components/Image.astro';
+import heroBg from '../assets/images/ember-bg-portrait-sm.jpg';
 import swSignatureImg from '../assets/images/sydney-whitten-keep-well-sig-fern.svg';
 import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
+import swProfileGradPhoto from '../assets/images/swhitten-profile-grad-portrait.jpg';
 
 const metadata = {
   title: 'Meet Sydney',
@@ -20,16 +22,17 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline=""
-  >
+  <Hero id="meet-sydney-hero">
+    <Fragment slot="bg">
+      <div style={`background-image: url(${heroBg.src}); background-position: 0% 35%`} class="absolute inset-0 sw-bg-color-willow bg-opacity-25 bg-no-repeat bg-cover bg-right"></div>
+    </Fragment>
     <Fragment slot="title">
-      My Mission
+      My Mission in Healthcare
     </Fragment>
 
-    <Fragment slot="subtitle">
+    <!-- <Fragment slot="subtitle">
       <YouTube class="mx-auto" id="3URtTIdnXIk" />
-    </Fragment>
+    </Fragment> -->
     <!-- <Fragment slot="subtitle">
       Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
       quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
@@ -37,7 +40,10 @@ const metadata = {
     </Fragment> -->
   </Hero>
 
-  <Content>
+  <Content
+    id="meet-sydney-section",
+    title="Hi there, my name is Sydney Whitten,"
+  >
     <Fragment slot="content">
       <Image src={swProfilePhoto}
             class="max-w-full lg:max-w-[900px] mx-auto float-right pl-10 pb-10 rounded-md"
@@ -48,10 +54,11 @@ const metadata = {
             loading="eager"
             decoding="async"
           />
-      <p class="text-lg mb-3">Hi there, my name is Sydney Whitten, and I’m so happy you’ve made your way to my page. You may have noticed the countdown clock on my homepage—I'm finishing up my Naturopathic Medicine education, which includes my final graduation (yay) and licensing exams. There’s a lot more to come, and I’m excited to start providing care soon, so stay tuned!</p>
-      <p class="mb-3">In the meantime, I want to share a bit about myself and my approach to your healthcare. To backtrack a little bit I have a Bachelor of Science in Biomedical Toxicology, where I studied first how the human body functions, as well as learned about all the exposures and habits that have the potential to cause the body harm. I balanced that education out with a minor in Nutritional and Nutraceutical Sciences, which deepened my understanding of the positive effects that nutrition, exercise, and healthy habits can have on our bodies.</p>
-      <p class="mb-3">All of this to say- After graduation, I was excited about using my knowledge in supporting people’s long-term health—but I quickly realized after entering the real world- how easy it is to neglect our health symptoms and well-being in the chaos of everyday life. Between family, work, bills, a social life? and all the other demands on your time, health and those bothersome symptoms you’ve been struggling with often get pushed aside. Add in a healthcare system that's overwhelmed, and it’s really no surprise that  many feel unsupported in their health and unsure where to turn.</p>
-      <p>Now this is where I aim to make a difference. My mission is to give you the time and a safe space to offload your health concerns, paste experiences and goals. Let me take on all of that weight I’ll then use my knowledge, clinical experience, the latest research, and your preferences to create a personalized plan to get you feeling better. No more days of frustration with nobody to talk about your concerns. No more days of frantically googling or tik toking only to overwhelm yourself trying to figure out what is real and what is false. That’s what I’m here for. To be the person on your team that helps you navigate your health concerns, and supports you in your health and well-being for the long-game- so that you can take that energy and show up as your best self in all the other avenues of your life.</p>
+      <p class="text-lg mb-3">I’m so glad you’ve made your way to my page. You may have noticed the countdown clock on my homepage—I'm currently finishing up my Naturopathic Medical education, which includes my final graduation (yay) and licensing exams. There’s a lot more to come, and I’m excited to start providing care soon, so stay tuned!</p>
+      <p class="mb-3">In the meantime, I want to share a bit about myself and my approach to your healthcare. To backtrack a bit, I have a Bachelor of Science in Biomedical Toxicology and a minor in Nutritional and Nutraceutical Sciences. This is where I first learned about all the complexities of the human body, and how it functions! I also developed a strong understanding of the exposures and habits that have the potential to cause the body harm, as well as the positive impact that certain nutrients, exercises, and healthy habits can have on a human’s health trajectory. After this 5-year degree, I then completed my 4-year Doctor of Naturopathy Degree, which puts me where I am today!</p>
+      <p class="mb-3">When it comes to healthcare, I recognize how easy it can be for your health concerns to be pushed aside by the demands of everyday life. Between family life, work, bills, a social life?, and all the other demands on your time. Not to mention our overburdened healthcare system that may also limit your care. It is really no wonder you feel unsupported in your health and unsure of where to turn for help.</p>
+      <p>Now this is where I aim to make a difference. My mission is to give you the time and a safe space to share your health concerns, past experiences, and goals. I want to hear your full story, so that I can then use my knowledge and clinical experience, the latest research, and your preferences to do the detective work and eventually get you feeling better.</p>
+      <p>No more days of frustration with nobody to talk about your concerns. No more days of frantically googling or tik toking health topics only to overwhelm yourself. That’s what I’m here for! I'm excited to work together.</p>
         <Image src={swSignatureImg}
             class="max-w-full lg:max-w-[900px] mx-auto float-left mt-10 ml-48 -rotate-6"
             widths={[400, 900]}
@@ -67,197 +74,53 @@ const metadata = {
       <div class="absolute inset-0 sw-bg-color-mist"></div>
     </Fragment>
   </Content>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+    <Content
+    tagline=""
+    title=""
     items={[
       {
-        title: 'Educational',
+        title: 'Bachelor of Science: Biomedical Toxicology Honours Co-op<br/>(University of Guelph, 2016-2021)',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          '',
       },
       {
-        title: 'Interior Design',
+        title: 'Minor in Nutrition and Nutraceutical Sciences<br/>(University of Guelph, 2016-2021)',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          '',
       },
       {
-        title: 'Photography',
+        title: 'Completed an internship on the Fertility Focused Care Shift<br/>(CCNM, 2024-2025)',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          '',
       },
       {
-        title: 'Blog',
+        title: 'Completed an externship at Natural Choice Medical Clinic, Guelph ON<br/>(2025)',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          '',
       },
       {
-        title: 'Business',
+        title: "CCNM Governor's Award of Excellence - for outstanding academic performance<br/>(2025)",
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          '',
       },
       {
-        title: 'Branding',
+        title: "More exciting things to come!",
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          '',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: swProfileGradPhoto,
+      imageFullWidth: true,
+      alt: '',
     }}
-  />
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-5">Professional Bio</h3>
+    </Fragment>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-transparent"></div>
+    </Fragment>
+  </Content>
 </Layout>

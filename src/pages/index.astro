@@ -10,7 +10,7 @@ import Button from '~/components/ui/Button.astro';
 import { getPermalink } from '../utils/permalinks';
 
 import localStockImage3 from '../assets/images/sydney-whitten-stock-3.jpg';
-import heroBg from '../assets/images/switten-hero-bg.png';
+import heroBg from '../assets/images/swhitten-hero-bg-lighter.jpg';
 import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
 import swBrownTexturedBg from '../assets/images/brown-textured-bg.jpg';
 import swRingsBg from '../assets/images/bg-texture.jpg';
@@ -24,7 +24,10 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <Hero>
-    <Fragment bg=heroBg slot="title">
+    <Fragment slot="bg">
+      <div style={`background-image: linear-gradient(rgba(255, 255, 255), rgba(255, 255, 255, 0.2)), url(${heroBg.src}); background-position: 0% 35%`} class="absolute inset-0 sw-bg-color-willow bg-opacity-25 bg-no-repeat bg-cover bg-right"></div>
+    </Fragment>
+    <Fragment slot="title">
       Naturopathic Medical Graduate- Menstrual Health, Menopause &amp; Digestive Wellness.
     </Fragment>
   </Hero>

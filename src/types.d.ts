@@ -107,6 +107,7 @@ export interface Widget {
 
 export interface Headline {
   title?: string;
+  isTitleLeft?: boolean,
   subtitle?: string;
   tagline?: string;
   classes?: Record<string, string>;
@@ -275,6 +276,7 @@ export interface Steps extends Omit<Headline, 'classes'>, Widget {
 
 export interface Content extends Omit<Headline, 'classes'>, Widget {
   content?: string;
+  contentWidthPercentage?: number,
   image?: string | unknown;
   items?: Array<Item>;
   columns?: number;

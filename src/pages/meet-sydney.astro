@@ -42,7 +42,9 @@ const metadata = {
 
   <Content
     id="meet-sydney-section",
-    title="Hi there, my name is Sydney Whitten,"
+    title="Hi there, I'm Sydney Whitten.",
+    contentWidthPercentage={100}
+    isTitleLeft={true}
   >
     <Fragment slot="content">
       <Image src={swProfilePhoto}
@@ -75,6 +77,7 @@ const metadata = {
     </Fragment>
   </Content>
     <Content
+    contentWidthPercentage={50}
     tagline=""
     title=""
     items={[
@@ -112,6 +115,7 @@ const metadata = {
     image={{
       src: swProfileGradPhoto,
       imageFullWidth: true,
+      height:'auto',
       alt: '',
     }}
   >

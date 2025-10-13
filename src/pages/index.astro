@@ -88,6 +88,7 @@ const metadata = {
   <Content
     tagline=""
     title=""
+    contentWidthPercentage={75}
     items={[
       // {
       //   title: 'Hustling at school/work to build your dream future.',
@@ -107,7 +108,11 @@ const metadata = {
     ]}
     image={{
       src: localStockImage3,
-      alt: '',
+      alt: 'Woman holding a map',
+      loading: 'eager',
+      width: 400,
+      height: 400,
+      layout: 'responsive'
     }}
   >
     <Fragment slot="content">
@@ -179,6 +184,7 @@ const metadata = {
 
   <Content
     id="about"
+    contentWidthPercentage={75}
     columns={2}
     isReversed
     imageFullWidth
@@ -186,8 +192,7 @@ const metadata = {
       src: swProfilePhoto,
       alt: 'Sydney Whitten Profile Photo',
       loading: 'eager',
-      width: 400,
-      layout: 'full-width'
+      width: 400
     }}
   >
     <Fragment slot="content">

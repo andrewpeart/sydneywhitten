@@ -8,9 +8,11 @@ import ItemGrid from '../ui/ItemGrid.astro';
 
 const {
   title = await Astro.slots.render('title'),
+  isTitleLeft = false,
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
   content = await Astro.slots.render('content'),
+  contentWidthPercentage = Astro.props.contentWidthPercentage,
   callToAction,
   items = [],
   columns,
@@ -24,6 +26,9 @@ const {
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+const containerClasses = 'headline-container' + isTitleLeft ? 'text-left px-8' : 'max-w-xl sm:mx-auto lg:max-w-2xl';
+const contentWidthPercentageStyle = contentWidthPercentage ? 'width: ' + contentWidthPercentage + '%' : '100%';
 ---
 
 <WidgetWrapper
@@ -37,14 +42,14 @@ const {
     subtitle={subtitle}
     tagline={tagline}
     classes={{
-      container: 'headline-container max-w-xl sm:mx-auto lg:max-w-2xl',
+      container: containerClasses,
       title: 'text-4xl md:text-5xl font-bold mb-4 font-heading',
       subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
     }}
   />
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class={`v self-center`}>
+      <div class={`v`} style={`${contentWidthPercentageStyle}`}>
         {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
 
         {

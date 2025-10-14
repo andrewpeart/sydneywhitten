@@ -9,7 +9,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { YouTube } from 'astro-embed';
 import Contact from './contact.astro';
 import Image from 'astro/components/Image.astro';
-import heroBg from '../assets/images/ember-bg-portrait-sm.jpg';
+import heroBg from '../assets/images/sw-hero-ember-pattern-bg.jpg';
 import swSignatureImg from '../assets/images/sydney-whitten-keep-well-sig-fern.svg';
 import swProfilePhoto from '../assets/images/sw-profile-photo.jpg';
 import swProfileGradPhoto from '../assets/images/swhitten-profile-grad-portrait.jpg';
@@ -24,7 +24,7 @@ const metadata = {
 
   <Hero id="meet-sydney-hero">
     <Fragment slot="bg">
-      <div style={`background-image: url(${heroBg.src}); background-position: 0% 35%`} class="absolute inset-0 sw-bg-color-willow bg-opacity-25 bg-no-repeat bg-cover bg-right"></div>
+      <div style={`background-image: url(${heroBg.src})`} class="absolute inset-0 sw-bg-color-willow bg-opacity-25 bg-no-repeat bg-cover bg-right"></div>
     </Fragment>
     <Fragment slot="title">
       My Mission in Healthcare

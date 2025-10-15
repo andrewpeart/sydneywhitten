@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'Health Concerns',
-      href: '#health-concerns'
+      href: '/#health-concerns'
       // links: [
       //   {
       //     text: 'SaaS',
@@ -74,11 +74,12 @@ export const footerData = {
   links: [
     {
       title: 'Health Concerns',
-      href: '#',
+      href: '/#health-concerns',
       links: [
-        { text: 'Menstrual Health', href: '#' },
-        { text: 'Perimenopause & Menopause', href: '#' },
-        { text: 'Digestive Health', href: '#' }
+        { text: 'Menstrual Health', href: '/#health-concerns' },
+        { text: 'Perimenopause & Menopause', href: '/#health-concerns' },
+        { text: 'Digestive Health', href: '/#health-concerns' },
+        { text: 'General Health', href: '/#health-concerns' }
       ],
     },
     {

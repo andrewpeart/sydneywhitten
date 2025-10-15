@@ -297,6 +297,7 @@ const metadata = {
     items={[
       {
         title: 'Menstrual Health',
+        id: 'menstrual-health',
         description:
           "<ul><li>Irregular Periods</li><li>Heavy Periods</li><li>Painful Periods</li><li>Premenstrual Syndrome (PMS)</li><li>Polycystic Ovarian Syndrome (PCOS)</li><li>Endometriosis</li><li>Female Pelvic Examinations & PAP Tests</li></ul>",
         icon: 'healthicons:female-reproductive-system-outline',
@@ -304,6 +305,7 @@ const metadata = {
       },
       {
         title: 'Perimenopause & Menopause',
+        id: 'perimenopause-menopause',
         description:
           '<ul><li>Hot Flashes & Night Sweats</li><li>Mood Swings</li><li>Low Energy</li><li>Sleep Disturbances</li><li>Weight Gain</li><li>Vaginal Dryness</li><li>Bladder Incontinence</li></ul>',
         icon: 'tabler:circle-dotted-letter-m',
@@ -312,6 +314,7 @@ const metadata = {
       },
       {
         title: 'Digestive Health',
+        id: 'digestive-health',
         description: "<ul><li>Gas & Bloating</li><li>Constipation</li><li>Diarrhea</li><li>Irritable Bowel Syndrome (IBS)</li><li>Small Intestinal Bacterial Overgrowth (SIBO)</li><li>Reflux</li></ul>",
         icon: 'healthicons:colon-outline',
         classes: {'panel': 'sw-bg-color-fern sw-color-mist'}
@@ -319,7 +322,7 @@ const metadata = {
     ]}
   >
       <Fragment slot="feature-more">
-        <div class="relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade grid rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] sw-bg-color-forest p-6 mt-6 sw-color-mist">
+        <div id="general-health" class="relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade grid rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur border border-[#ffffff29] sw-bg-color-forest p-6 mt-6 sw-color-mist">
           <Icon name="healthicons:resilient-and-migration-sensitive-health-system-outline" class="mb-2 w-10 h-10" />
           <div class='text-xl font-bold'>General Health</div>
           <p class='text-muted mt-2'>The human body is complex, and I recognize that symptoms are often wide-ranging. My aim is to address all health concerns, and to provide appropriate referrals when determined necessary.</p>

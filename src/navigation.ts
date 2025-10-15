@@ -84,7 +84,7 @@ export const footerData = {
     },
     {
       title: 'Meet Sydney',
-      href: '#',
+      href: getPermalink('/meet-sydney'),
     },
     // {
     //   title: 'Support',

@@ -1,6 +1,6 @@
 site:
   name: Sydney Whitten
-  site: 'https://swhitten.netlify.app/'
+  site: 'https://sydneywhitten.ca'
   base: '/'
   trailingSlash: false
 
@@ -18,14 +18,10 @@ metadata:
   openGraph:
     site_name: Sydney Whitten
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/sydney-whitten-og.jpg'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
 
 i18n:
   language: en

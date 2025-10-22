@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: Sydney Whitten
     images:
-      - url: '~/assets/images/og/sydney-whitten-og.jpg'
+      - url: '~/assets/images/sydneywhitten-og.jpg'
         width: 1200
         height: 628
     type: website
